@@ -1,0 +1,22 @@
+.item-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+  color: gray;
+  font-size: 1rem;
+  padding: 0px 1.2rem;
+  cursor: pointer;
+}
+.item-button:hover {
+  background: #f3fafe !important;
+  color: #007bff;
+}
+.item-button:focus {
+  background: #f3fafe !important;
+  color: #007bff;
+}
+input:focus {
+  outline: none;
+}

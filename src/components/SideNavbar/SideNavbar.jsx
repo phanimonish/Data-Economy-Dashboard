@@ -28,6 +28,7 @@ import MenuItem from "@mui/material/MenuItem";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import Badge from "@mui/material/Badge";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
+import { useNavigate } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -97,6 +98,7 @@ const Drawer = styled(MuiDrawer, {
 }));
 
 export default function SideNavbar() {
+  const navigate = useNavigate()
   const [anchorEl, setAnchorEl] = React.useState(null);
   const start = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -265,7 +267,7 @@ export default function SideNavbar() {
           </button>
         </div>
         <div>
-          <button className="item-button">
+          <button className="item-button" onClick={()=> navigate("validations")}>
             <Tooltip title="Validations" placement="right-start">
               <LeaderboardOutlinedIcon />
             </Tooltip>

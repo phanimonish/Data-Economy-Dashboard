@@ -174,7 +174,9 @@ export default function SideNavbar() {
             </div>
             <div style={{ flexGrow: "1" }}></div>
             <Badge color="primary" badgeContent={""}>
-              <NotificationsOutlinedIcon style={{ color: "gray", display: "flex", alignItems: "center" }} />
+              <NotificationsOutlinedIcon
+                style={{ color: "gray", display: "flex", alignItems: "center" }}
+              />
             </Badge>
             <button
               style={{

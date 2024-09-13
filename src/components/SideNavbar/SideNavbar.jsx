@@ -10,7 +10,6 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import logo from "../../images/logo.png";
 import "./SideNavbar.css";
 import { Tooltip } from "@mui/material";
 import LeaderboardOutlinedIcon from "@mui/icons-material/LeaderboardOutlined";
@@ -98,7 +97,7 @@ const Drawer = styled(MuiDrawer, {
 }));
 
 export default function SideNavbar() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const start = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -243,12 +242,14 @@ export default function SideNavbar() {
         </Toolbar>
       </AppBar>
       <Drawer style={{ border: "none" }} variant="permanent" open={open}>
-        <DrawerHeader>
-          <img
-            style={{ marginRight: "50px", height: "60px" }}
-            src={logo}
-            alt="data economy"
-          />
+        <DrawerHeader
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <h1 style={{ margin: "0rem 1rem" }}>StatView</h1>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "rtl" ? (
               <ChevronRightIcon />
@@ -267,7 +268,10 @@ export default function SideNavbar() {
           </button>
         </div>
         <div>
-          <button className="item-button" onClick={()=> navigate("validations")}>
+          <button
+            className="item-button"
+            onClick={() => navigate("/validations")}
+          >
             <Tooltip title="Validations" placement="right-start">
               <LeaderboardOutlinedIcon />
             </Tooltip>

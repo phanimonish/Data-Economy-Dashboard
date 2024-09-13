@@ -72,21 +72,7 @@ export const Settings = () => {
                 label="Trust Score Configurations"
                 {...a11yProps(0)}
               />
-              <Tab
-                style={{ textTransform: "inherit" }}
-                label="Match Merge Rules"
-                {...a11yProps(1)}
-              />
-              <Tab
-                style={{ textTransform: "inherit" }}
-                label="House Hold Rules"
-                {...a11yProps(2)}
-              />
-              <Tab
-                style={{ textTransform: "inherit" }}
-                label="Pre Validation Rules"
-                {...a11yProps(2)}
-              />
+
             </Tabs>
           </Box>
           <div
